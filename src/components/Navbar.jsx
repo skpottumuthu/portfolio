@@ -42,6 +42,7 @@ function Navbar({ setActiveSection }) {
               download="Santosh_Resume_Fall24.pdf"
               target="_blank" 
               className="hover:text-blue-500 transition duration-300 text-lg"
+              rel='noopener noreferrer'
             >
               Resume
             </a>
