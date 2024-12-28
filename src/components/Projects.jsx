@@ -7,6 +7,8 @@ function Projects() {
       <p className="mt-4 text-gray-600">
         Information about your education and academic journey goes here.
       </p>
+
+      <p>CKKS Encryption Toolkit in Rust</p>
     </section>
   );
 }
