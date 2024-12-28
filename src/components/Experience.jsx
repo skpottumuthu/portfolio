@@ -39,8 +39,7 @@ function Experience() {
             MoveInSync Technologies, Bengaluru, India
           </p>
           <p className="text-md text-gray-500 mt-2">
-            <strong>Duration:</strong> April 2021 – July 2023
-          </p>
+            <strong>Duration:</strong> April 2021 – July 2023</p>
           <ul className="list-disc text-left text-md text-gray-500 mt-4 ml-6">
             <li>
               Led critical migrations to microservices architecture for trip and vehicle management systems, enhancing scalability and flexibility.
