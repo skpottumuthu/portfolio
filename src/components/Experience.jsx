@@ -39,7 +39,7 @@ function Experience() {
             MoveInSync Technologies, Bengaluru, India
           </p>
           <p className="text-md text-gray-500 mt-2">
-            <strong>Duration:</strong> May 2022 – July 2023
+            <strong>Duration:</strong> April 2021 – July 2023
           </p>
           <ul className="list-disc text-left text-md text-gray-500 mt-4 ml-6">
             <li>
