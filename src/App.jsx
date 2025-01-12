@@ -37,7 +37,6 @@ import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
-import ScrollToTop from './components/ScrollToTop';
 import Skills from './components/Skills/Skills';
 
 function App() {
