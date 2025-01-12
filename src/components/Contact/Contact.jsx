@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com'; // Import EmailJS
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -6,6 +7,8 @@ function Contact() {
     email: '',
     message: ''
   });
+
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -16,9 +19,30 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (EmailJS or any backend integration)
-    console.log('Form Submitted:', formData);
-    alert('Your message has been sent!');
+
+    setIsSending(true); // Show a loading state while sending the email
+
+    // EmailJS Parameters
+    const serviceID = 'your_service_id'; // Replace with your EmailJS Service ID
+    const templateID = 'your_template_id'; // Replace with your EmailJS Template ID
+    const publicKey = 'your_public_key'; // Replace with your EmailJS Public Key
+
+    emailjs
+      .send(serviceID, templateID, formData, publicKey)
+      .then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Your message has been sent!');
+          setFormData({ name: '', email: '', message: '' }); // Reset form
+        },
+        (error) => {
+          console.error('FAILED...', error);
+          alert('Failed to send message. Please try again later.');
+        }
+      )
+      .finally(() => {
+        setIsSending(false); // Remove the loading state
+      });
   };
 
   return (
@@ -77,8 +101,9 @@ function Contact() {
           <button
             type="submit"
             className="w-full p-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300"
+            disabled={isSending} // Disable button while sending
           >
-            Send Message
+            {isSending ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>
