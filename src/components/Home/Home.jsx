@@ -1,8 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import resumePDF from "../../assets/SantoshResumeJan25.pdf";
 import profileImage from "../../assets/profilePhoto2.jpg";
 
 function Home() {

@@ -64,15 +64,6 @@ function Skills() {
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.3 }
-    }
-  };
-
   return (
     <section id="skills" className="py-20 bg-gradient-to-br from-blue-100 via-gray-100 to-blue-200">
       <div className="max-w-6xl mx-auto px-6">

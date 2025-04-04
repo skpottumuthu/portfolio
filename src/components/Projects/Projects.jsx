@@ -7,14 +7,14 @@ const projects = [
     description:
       "A homomorphic encryption toolkit implemented in Rust as a crate. Allows secure operations on encrypted numeric and string data, particularly useful in sensitive industries like healthcare.",
     techStack: ["Rust", "Cryptography", "Homomorphic Encryption"],
-    link: "https://github.com/your-profile/ckks-encryption-toolkit",
+    link: "https://github.com/Chandan-M-N/ckks-engine",
   },
   {
     title: "Schedule Ease",
     description:
       "An interactive application that enables team members to add their availabilities, while the admin can use AI to determine the optimal availability for all members within a given time frame. The system supports natural language queries for database interaction and provides an intuitive UI for managing schedules.",
     techStack: ["React", "SpringBoot","PostgreSQL", "AWS", "Vercel", "NeonDatabase","OpenAI API"],
-    link: "https://github.com/your-profile/schedule-ease",
+    link: "https://github.com/skpottumuthu/schedule-ease-ui",
   },
 
   {
