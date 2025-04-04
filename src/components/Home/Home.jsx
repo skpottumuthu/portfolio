@@ -2,82 +2,118 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import homepageImage from "../../assets/homePageImage.png";
 import resumePDF from "../../assets/SantoshResumeJan25.pdf";
-
+import profileImage from "../../assets/profilePhoto2.jpg";
 
 function Home() {
-  const fullName = "Santosh Kumar Pottumuthu!";
-
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gray-50 text-gray-800 px-8 pt-20" >
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full max-w-6xl">
-        {/* Left Text Content */}
-        <motion.div
-          className="md:w-2/3 text-left"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-            Hi, I'm <span className="text-blue-500">{fullName}</span>
-          </h1>
-          <p className="text-lg sm:text-2xl max-w-3xl opacity-90 mb-8">
-            A passionate <strong>Software Engineer</strong> and currently
-            working as a <strong>Graduate Research Assistant</strong> at the{" "}
-            <strong>University of Georgia</strong>. I specialize in building
-            scalable software, optimizing performance, and exploring{" "}
-            <span className="text-blue-500 font-semibold">Machine Learning</span>{" "}
-            and{" "}
-            <span className="text-blue-500 font-semibold">
-              High-Performance Computing
-            </span>
-            .
-          </p>
-
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-6">
-            <a
-              href={resumePDF} // Replace with the correct path
-              download
-              className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 hover:shadow-lg hover:scale-105 transition-all duration-300"
+      className="min-h-screen flex items-center bg-gradient-to-br from-blue-100 via-gray-100 to-blue-200 px-6 pt-20"
+    >
+      <div className="max-w-7xl w-full mx-auto py-16 md:py-24">
+        {/* Main content */}
+        <div className="flex flex-col md:flex-row md:items-center gap-12">
+          <div className="max-w-3xl">
+            <motion.h1 
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-8"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.7,
+                type: "spring",
+                stiffness: 100
+              }}
             >
-  <FontAwesomeIcon icon={faDownload} className="w-5 h-5" /> {/* Font Awesome Icon */}
-  Download Resume
-</a>
-
-            {/* LinkedIn Button */}
-            <a
-              href="https://www.linkedin.com/in/skpottumuthu/" // Replace with your LinkedIn profile link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-gray-100 text-gray-800 font-semibold rounded-lg shadow-md hover:bg-gray-200 hover:shadow-lg hover:scale-105 transition-all duration-300"
+              Software Developer
+            </motion.h1>
+            
+            <motion.p
+              className="text-xl text-gray-900 mb-12 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.7, 
+                delay: 0.3,
+                type: "spring",
+                stiffness: 50
+              }}
             >
-              Connect on LinkedIn
-            </a>
+              Software Engineer with 2 years of experience, specializing in backend development and cloud-based solutions to drive business growth and software scalability. Highly skilled in Java, Spring Boot, and software engineering principles, with a track record of optimizing system performance, automating workflows, and crafting scalable solutions. Over the next 5 years, I aim to blend software engineering with AI to streamline and accelerate development processes, and to excel in leadership skills to guide teams and deliver impactful business outcomes
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-wrap gap-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: 0.6,
+                type: "spring"
+              }}
+            >
+              <motion.a
+                href="#contact"
+                className="px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.2)"
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Hire Me
+              </motion.a>
+              
+              <motion.a
+                href="#projects"
+                className="px-8 py-4 bg-white border border-gray-300 text-gray-900 font-medium rounded-lg hover:bg-gray-100 transition-colors duration-300"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)"
+                }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Work
+              </motion.a>
+            </motion.div>
           </div>
-        </motion.div>
-
-        <motion.div
-          className="md:w-1/2 flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <img
-  src={homepageImage}
-  alt="Tech Animation"
-  className="w-full max-w-sm object-contain"
-/>
-
-          {/* <img
-            src="homepageImage" // Replace with the correct path
-            alt="Tech Animation"
-            className="w-full max-w-lg h-auto md:h-[400px] object-contain"
-          /> */}
-        </motion.div>
+          
+          <motion.div
+            className="flex-shrink-0"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ 
+              duration: 0.8, 
+              delay: 0.4,
+              type: "spring",
+              stiffness: 100 
+            }}
+          >
+            <motion.div
+              whileHover={{ 
+                scale: 1.03,
+                boxShadow: "0px 10px 25px rgba(0, 0, 0, 0.2)",
+                rotate: 1
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <img 
+                src={profileImage} 
+                alt="Profile" 
+                className="rounded-lg shadow-xl"
+                style={{ 
+                  width: '340px',
+                  height: '340px',
+                  objectFit: 'cover',
+                  objectPosition: '50% 25%',
+                  borderRadius: '12px',
+                  background: 'rgba(180, 180, 180, 0.2)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)'
+                }}
+              />
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

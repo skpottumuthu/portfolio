@@ -38,17 +38,17 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="bg-gray-50 py-16 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <motion.h2
-          className="text-4xl font-bold text-gray-800 mb-12 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+    <section id="projects" className="py-20 bg-gradient-to-br from-blue-100 via-gray-100 to-blue-200">
+      <div className="max-w-7xl mx-auto px-6">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
-          My Projects
-        </motion.h2>
+          <h2 className="text-5xl font-extrabold text-gray-800 mb-4">Projects</h2>
+        </motion.div>
 
         {/* Projects Grid */}
         <motion.div
@@ -73,15 +73,15 @@ function Projects() {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              <h3 className="text-2xl font-semibold text-gray-700 mb-3">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-3">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
+              <p className="text-gray-900 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="text-sm bg-blue-100 text-blue-600 px-2 py-1 rounded-lg"
+                    className="text-sm bg-blue-100 text-blue-700 px-2 py-1 rounded-lg"
                   >
                     {tech}
                   </span>
@@ -91,7 +91,7 @@ function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline font-semibold"
+                className="text-blue-700 hover:underline font-semibold"
               >
                 View Project
               </a>
